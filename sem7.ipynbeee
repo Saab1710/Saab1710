@@ -1,0 +1,326 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyMCtKI3QVCh9gp11xHFSYqo",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Saab1710/Saab1710/blob/main/sem7.ipynbeee\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "id": "--5gtl4WjIDH"
+      },
+      "outputs": [],
+      "source": []
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "hz-M-1kkjTRX"
+      },
+      "execution_count": 1,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Question 1: Find Euclidean distance between two points (4, 9, 1) and (2, 3, 7). Using square() and sum() by NumPy.\n",
+        "import numpy as np\n",
+        "\n",
+        "# initializing points in\n",
+        "# numpy arrays\n",
+        "point1 = np.array((4, 8, 7))\n",
+        "point2 = np.array((6, 6, 6))\n",
+        "\n",
+        "# calculating Euclidean distance\n",
+        "# using linalg.norm()\n",
+        "dist = np.linalg.norm(point1 - point2)\n",
+        "\n",
+        "# printing Euclidean distance\n",
+        "print(dist)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "_xwRD0m1j1iB",
+        "outputId": "db473c25-6ad4-494e-d4b4-3f838343d13d"
+      },
+      "execution_count": 8,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "3.0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Using square() and sum() by NumPy.\n",
+        "import numpy as np\n",
+        "\n",
+        "# Initializing points in numpy arrays\n",
+        "point1 = np.array((7, 7, 7))\n",
+        "point2 = np.array((2, 3, 7))\n",
+        "\n",
+        "# Calculating squared difference\n",
+        "squared_diff = np.square(point1 - point2)\n",
+        "\n",
+        "# Summing the squared differences and taking the square root\n",
+        "dist = np.sqrt(np.sum(squared_diff))\n",
+        "\n",
+        "# Printing the Euclidean distance\n",
+        "print(dist)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "YcXw8IPAlCas",
+        "outputId": "ff4b4435-c56c-47e3-c40c-e4152c62767f"
+      },
+      "execution_count": 9,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "6.4031242374328485\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#Question 2: Write a NumPy program to concatenate element-wise two arrays of\n",
+        "string.\n",
+        "Input:\n",
+        "(['Big', 'Mongo'], dtype=np.str)(['Data', 'DB'], dtype=np.str)\n",
+        "Output:\n",
+        "Generate the new array:['BigData' 'MongoDB’]"
+      ],
+      "metadata": {
+        "id": "03RpVXCsmObY"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Solution- Q2\n",
+        "import numpy as np\n",
+        "x1 = np.array(['Big', 'Mongo'])\n",
+        "x2 = np.array(['Data', 'DB'])\n",
+        "x3 = np.array(('richard'))\n",
+        "#print('Array1:')\n",
+        "#print(x1)'Richard', 'oconnell'])\n",
+        "#print('Array2:')\n",
+        "#print(x3)\n",
+        "new_array = np.char.add(x1, x2)\n",
+        "print('new array:')\n",
+        "print(new_array)\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "BmUO_vC2mWfx",
+        "outputId": "1ebe454d-63b1-49b6-dfb5-74ddd53fa52d"
+      },
+      "execution_count": 23,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "new array:\n",
+            "['BigData' 'MongoDB']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Question 3: Given the array:\n",
+        "array_one = np.arange(1,11)\n",
+        "What would be returned by this expression: array_one + np.arange(10, 0, -1)?\n",
+        "What is the result of array_one > 2 ?\n",
+        "What would be returned by this expression: array_one + np.arange(10, 0, -1)?"
+      ],
+      "metadata": {
+        "id": "QPvLud9NpRiV"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Solution- Q3\n",
+        "#Here we’re creating a new array with a descending range: [10  9  8  7  6  5  4  3  2  1] and\n",
+        "#adding it to [ 1  2  3  4  5  6  7  8  9 10], so we get an array with the values [10 11 11 11 11 11 11 11 11 11].\n",
+        "one_dim= np.array([1,2,3,4,5,6,7,8,9,10])\n",
+        "print(one_dim)\n",
+        "print(np.arange(10, 0, -4))\n",
+        "print(one_dim + np.arange(10, 0, -1))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "TBKkywyOpUYN",
+        "outputId": "7dd9cbd3-3c63-46d8-c2a0-16520220e279"
+      },
+      "execution_count": 27,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[ 1  2  3  4  5  6  7  8  9 10]\n",
+            "[10  6  2]\n",
+            "[11 11 11 11 11 11 11 11 11 11]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# What is the result of array_one > 2 ?\n",
+        "\n",
+        "\n",
+        "print(one_dim > 2)\n"
+      ],
+      "metadata": {
+        "id": "vNl8Q-LfrqC2"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [],
+      "metadata": {
+        "id": "oei050olrs92"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [],
+      "metadata": {
+        "id": "bJH49UR-qXYS"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(one_dim > 2)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "CrkzEm4ar0D6",
+        "outputId": "b4210123-9eec-4f3c-b3ea-d858742cee97"
+      },
+      "execution_count": 28,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[False False  True  True  True  True  True  True  True  True]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Question 4:\n",
+        "import numpy as np\n",
+        "arr1= np.array([1,2,3,5,7])\n",
+        "print(np.max(arr1))\n",
+        "print(np.min(arr1))\n",
+        "print(np.max(arr1))\n",
+        "print(np.sum(arr1))\n",
+        "print(np.average(arr1))\n",
+        "print(np.std(arr1))"
+      ],
+      "metadata": {
+        "id": "P7jEn0GPsBW_"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "CclRRqNPsEwg"
+      },
+      "execution_count": 28,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Question 4:\n",
+        "import numpy as np\n",
+        "arr1= np.array([1,2,3,4,7])\n",
+        "print(np.max(arr1))\n",
+        "print(np.min(arr1))\n",
+        "print(np.max(arr1))\n",
+        "print(np.sum(arr1))\n",
+        "print(np.average(arr1))\n",
+        "print(np.std(arr1))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "GkdYphABsF-X",
+        "outputId": "d53d620e-9e85-4a7b-9241-e2fd7f9cb2f9"
+      },
+      "execution_count": 31,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "7\n",
+            "1\n",
+            "7\n",
+            "17\n",
+            "3.4\n",
+            "2.0591260281974\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
